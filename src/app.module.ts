@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ProjectsModule } from './projects/projects.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   imports: [
@@ -16,7 +17,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [__dirname + '/**/entities/*.entity.js']  // گفتیم یه پوشه بیا عقب برو تو اس ار سی هر ماژولی بود رو باز کن برو تو ان تی تیز و دنبال فایلی با این پسوند بگرد 
     }),
     
-    ProjectsModule],
+    ProjectsModule,
+    
+    TasksModule],
   controllers: [],
   providers: [],
 })
