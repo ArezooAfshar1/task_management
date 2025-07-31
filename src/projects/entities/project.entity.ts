@@ -1,8 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import  projectStatusEnum  from "../enums/project.enum";
+import { Task } from "../../tasks/entities/task.entity";
 
 @Entity()
-export class Projects {
+export class Project {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -11,4 +12,7 @@ export class Projects {
 
     @Column({ type: 'enum', enum: projectStatusEnum, default: projectStatusEnum.Enable})
     status: projectStatusEnum;
+
+    @OneToMany(()=> Task, (task)=> task.project )
+    tasks: Task[]
 }
