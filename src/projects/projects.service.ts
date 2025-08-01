@@ -68,7 +68,7 @@ export class ProjectsService {
   async remove(id: number): Promise<void> {
     const result = await this.projectRepository.delete({ id });
 
-    if (result.affected === 0)  // یعنی روی چند تا رکورد تانیر کذاشته اکر صفر بود یعنی هیجی 
+    if (result.affected === 0)  // یعنی روی چند تا رکورد تانیر کذاشته اگر صفر بود یعنی هیجی 
       throw new NotFoundException(`project ${id} not found`);
   }
 }
