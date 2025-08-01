@@ -9,4 +9,4 @@ This is a simple **RESTful API** built with **NestJS**, **PostgreSQL**, and **Ty
 - [NestJS](https://nestjs.com/)
 - [TypeORM](https://typeorm.io/)
 - [PostgreSQL](https://www.postgresql.org/)
-- TypeScript
+- [TypeScript](https://www.typescriptlang.org/)
